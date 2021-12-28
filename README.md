@@ -4,17 +4,17 @@ Hola, este es un proyecto de Laravel que he creado para la clase de Implantació
 
 El modelo trata de un Hotel llamado Hotel Emperador que tiene una serie de Habitaciones que tienen una categoría.
 
-El hotel tiene una serie de **clientes** que pueden realizar *valoraciones* a las *habitaciones* que posee el hotel.
+El hotel tiene una serie de **clientes** que pueden realizar **valoraciones** a las **habitaciones** que posee el hotel.
 
 
 ## Modelos Utilizados
 
 |    Modelos   |   Descripción   |
 |--------------|:---------------:|
-| Habitacion  |  Registro de habitaciones del hotel con su id, nombre, categoria.   |
-| Categoria  |    Categoria que clasifica las habitaciones.     |
+| Habitación  | Registro de habitaciones del hotel con su id, nombre, categoría.   |
+| Categoría  | Categoría que clasifica las habitaciones.     |
 | Cliente | Usuarios del sistema  |
-| Opinion | Opiniones generadas por los usuarios.   |
+| Opinión | Opiniones generadas por los usuarios. Cada usuario tiene su propia opinión.  |
 
 
 ## Link al Proyecto de Gitpod
