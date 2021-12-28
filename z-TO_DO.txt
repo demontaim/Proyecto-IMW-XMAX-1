@@ -1,0 +1,2 @@
+- Acabar las vistas de ubicación
+- Acabar las vistas de Información
