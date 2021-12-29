@@ -24,6 +24,18 @@
     </head>
     <body class="antialiased">
         <img src="http://pradilloarquitectura.com/wp-content/uploads/2017/05/Original-Logo-Hotel-Emperador-_-Madrid-Alta-300x285.jpg" class="img-responsive rounded mx-auto d-block">
+
+
+        <script>
+            Swal.fire(
+                'The Internet?',
+                'That thing is still around?',
+                'question'
+            )
+        </script>
     </body>
 </html>
 @endsection
+
+@include('sweetalert::alert')
+

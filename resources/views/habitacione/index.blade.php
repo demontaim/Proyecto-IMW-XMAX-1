@@ -13,7 +13,7 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('Habitaciones') }}
+                                {{ __('Listado de habitaciones') }}
                             </span>
 
                              <div class="float-right">
@@ -54,6 +54,10 @@
                                                 {{$habitacione->categoria_id = "Doble"}}
                                             @elseif ($habitacione->categoria_id == 4)
                                                 {{$habitacione->categoria_id = "Triple"}}
+                                            @elseif ($habitacione->categoria_id == 5)
+                                                {{$habitacione->categoria_id = "Matrimonio"}}
+                                            @elseif ($habitacione->categoria_id == 6)
+                                                {{$habitacione->categoria_id = "Presidencial"}}
                                             @endif
                                         </div>
 

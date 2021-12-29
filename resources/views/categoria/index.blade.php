@@ -4,8 +4,47 @@
     Categoria
 @endsection
 
+{{-- @section('scripts')
+    <script>
+        const panel = document.querySelector('#panel-control');
+
+        panel.addEventListener('click', eliminarCategoria);
+
+        function eliminarCategoria(e) {
+            if(e.target.classlist.contains('btn-eliminar')){
+                e.preventDefault();
+                console.log('click en eliminar');
+            }
+        }
+
+
+
+        // $('.formulario-eliminar').submit(function(e) {
+        //     e.preventDefault();
+        // });
+
+        //     Swal.fire({
+        // title: '¿Estás seguro?',
+        // text: "No podrás revertir este cambio!",
+        // icon: 'warning',
+        // showCancelButton: true,
+        // confirmButtonColor: '#3085d6',
+        // cancelButtonColor: '#d33',
+        // confirmButtonText: '¡Si, continuar!'
+        // }).then((result) => {
+        // if (result.isConfirmed) {
+        //     Swal.fire(
+        //     '¡Borrado!',
+        //     'La categoría ha sido borrada correctamente.',
+        //     'success'
+        //     )
+        // }
+        // })
+    </script>
+@endsection --}}
+
 @section('content')
-    <div class="container-fluid">
+    <div class="container-fluid" id="panel-control">
         <div class="row">
             <div class="col-sm-12">
                 <div class="card">
@@ -13,7 +52,7 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('Categoria') }}
+                                {{ __('Lista de Categorías') }}
                             </span>
 
                              <div class="float-right">
@@ -49,12 +88,12 @@
 											<td align="center">{{ $categoria->nombre }}</td>
 
                                             <td align="right">
-                                                <form action="{{ route('categorias.destroy',$categoria->id) }}" method="POST">
+                                                <form action="{{ route('categorias.destroy',$categoria->id) }}" method="POST" class="btn-eliminar">
                                                     <a class="btn btn-sm btn-primary " href="{{ route('categorias.show',$categoria->id) }}"><i class="fa fa-fw fa-eye"></i> Mostrar</a>
                                                     <a class="btn btn-sm btn-success" href="{{ route('categorias.edit',$categoria->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Eliminar</button>
+                                                    <button type="submit" class="btn btn-danger btn-sm btn-eliminar"><i class="fa fa-fw fa-trash"></i> Eliminar</button>
                                                 </form>
                                             </td>
                                         </tr>
