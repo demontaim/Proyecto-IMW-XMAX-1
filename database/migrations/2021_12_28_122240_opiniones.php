@@ -13,11 +13,8 @@ class Opiniones extends Migration
             $table->bigIncrements('id');
             $table->string('opinion');
 
-            //$table->integer('cliente_id')->unsigned();
-
             $table->timestamps();
 
-            //$table->foreign('cliente_id')->references('id')->on('clientes')->onDelete('cascade');
         });
     }
 

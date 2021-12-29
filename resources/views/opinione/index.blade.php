@@ -49,7 +49,7 @@
 											<td>{{ $opinione->opinion }}</td>
 
                                             <td align="right">
-                                                <form action="{{ route('opiniones.destroy',$opinione->id) }}" method="POST">
+                                                <form action="{{ route('opiniones.destroy',$opinione->id) }}" method="POST" id="form-eliminar">
                                                     <a class="btn btn-sm btn-primary " href="{{ route('opiniones.show',$opinione->id) }}"><i class="fa fa-fw fa-eye"></i> Mostrar</a>
                                                     <a class="btn btn-sm btn-success" href="{{ route('opiniones.edit',$opinione->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
                                                     @csrf
@@ -68,4 +68,32 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('scripts')
+    <script type="text/javascript">
+        $('#form-eliminar').submit(function(e) {
+            e.preventDefault();
+            Swal.fire({
+                title: '¿Estás seguro de que quieres borrarlo?',
+                text: "No podrás revertir estos cambios.",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Sí, continuar!',
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Swal.fire(
+                    //     '¡Borrado!',
+                    //     'Tú categoría ha sido correctamente borrada.',
+                    //     'success'
+                    // )
+                    this.submit();
+                }
+                
+
+            })
+        })
+    </script>
 @endsection

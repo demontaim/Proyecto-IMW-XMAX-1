@@ -32,7 +32,7 @@ class Habitacione extends Model
      *
      * @var array
      */
-    protected $fillable = ['categoria_id','nombre'];
+    protected $fillable = ['categoria_id','nombre', 'opinion_id'];
 
 
     /**
@@ -42,6 +42,4 @@ class Habitacione extends Model
     {
         return $this->hasOne('App\Models\Categoria', 'id', 'categoria_id');
     }
-    
-
 }

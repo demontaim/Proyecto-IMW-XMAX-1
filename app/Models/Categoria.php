@@ -14,7 +14,10 @@ class Categoria extends Model
     protected $perPage = 20;
 
   
-    protected $fillable = ['nombre'];
+    protected $fillable = [
+      'nombre',
+      
+    ];
 
 
     public function habitaciones()

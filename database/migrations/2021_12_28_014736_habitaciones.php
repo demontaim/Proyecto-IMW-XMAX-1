@@ -15,12 +15,12 @@ class Habitaciones extends Migration
 
             //Incluímos la cláve foránea
             $table->bigInteger('categoria_id')->unsigned();
-
             $table->string('nombre');
             $table->timestamps();
 
             //Referencia a la cláve foránea
             $table->foreign('categoria_id')->references('id')->on('categorias')->onDelete('cascade');
+
         });
     }
 

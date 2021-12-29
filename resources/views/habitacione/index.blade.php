@@ -67,7 +67,7 @@
 											<td align="center">{{ $habitacione->nombre }}</td>
 
                                             <td align="right">
-                                                <form action="{{ route('habitaciones.destroy',$habitacione->id) }}" method="POST">
+                                                <form action="{{ route('habitaciones.destroy',$habitacione->id) }}" method="POST" id="form-eliminar">
                                                     <a class="btn btn-sm btn-primary " href="{{ route('habitaciones.show',$habitacione->id) }}"><i class="fa fa-fw fa-eye"></i> Mostar</a>
                                                     <a class="btn btn-sm btn-success" href="{{ route('habitaciones.edit',$habitacione->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
                                                     @csrf
@@ -86,4 +86,30 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('scripts')
+    <script type="text/javascript">
+        $('#form-eliminar').submit(function(e) {
+            e.preventDefault();
+            Swal.fire({
+                title: '¿Estás seguro de que quieres borrarlo?',
+                text: "No podrás revertir estos cambios.",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Sí, continuar!',
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Swal.fire(
+                    //     '¡Borrado!',
+                    //     'Tú categoría ha sido correctamente borrada.',
+                    //     'success'
+                    // )
+                    this.submit();
+                }
+            })
+        })
+    </script>
 @endsection

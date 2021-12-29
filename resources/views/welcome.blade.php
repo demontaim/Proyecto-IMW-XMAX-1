@@ -10,6 +10,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
         <!-- Styles -->
         <style>
@@ -25,11 +26,12 @@
     <body class="antialiased">
         <img src="http://pradilloarquitectura.com/wp-content/uploads/2017/05/Original-Logo-Hotel-Emperador-_-Madrid-Alta-300x285.jpg" class="img-responsive rounded mx-auto d-block">
 
+        
 
         <script>
             Swal.fire(
-                'The Internet?',
-                'That thing is still around?',
+                '¿Te has perdido?',
+                '¡Bienvenido a mi home!',
                 'question'
             )
         </script>
