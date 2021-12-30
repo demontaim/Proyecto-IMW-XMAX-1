@@ -32,5 +32,13 @@ class Opinione extends Model
     protected $fillable = ['opinion'];
 
 
+    //Relación uno a muchos con usuarios
+    public function clientes() {
+      return $this->belongsTo('App\Models\Cliente');
+    }
+
+    public function habitacion(){
+      return $this->belongsTo('App\Models\Habitacione');
+    }
 
 }

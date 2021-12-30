@@ -1,5 +1,7 @@
 - Acabar las vistas de ubicación
 - Acabar las vistas de Información
 - Relacionar las tablas Clientes - opiniones
+- Arreglar el contador de opiniones
+- Arreglar que se muestr el id de cada cliente y habitacion en form.opiniones
 - Arreglar el español de las vistas clientes y opiniones
 - Implementar el SweetAlert

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EventoController;
 
 
 
@@ -27,6 +28,9 @@ Route::resource('info', App\Http\Controllers\InfoController::class)->only('index
 
 //Ruta para la ubicación de la página
 Route::resource('ubicacion', App\Http\Controllers\UbicacionController::class)->only('index');
+
+//Ruta para la agenda de eventos
+Route::resource('evento', App\Http\Controllers\EventoController::class)->only('index');
 
 Auth::routes();
 

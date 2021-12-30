@@ -42,4 +42,9 @@ class Habitacione extends Model
     {
         return $this->hasOne('App\Models\Categoria', 'id', 'categoria_id');
     }
+
+    //Relación con Opiniones
+    public function opiniones(){
+      return $this->hasMany('App\Models\Opiniones', 'id', 'opinion_id');
+    }
 }

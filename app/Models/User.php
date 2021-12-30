@@ -40,4 +40,11 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+    // //Relación uno a muchos con opiniones
+    // public function opiniones()
+    // {
+    //     return $this->hasMany('App\Models\Opinione');
+    // }
 }

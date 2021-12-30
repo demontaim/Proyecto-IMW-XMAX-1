@@ -24,4 +24,10 @@ class Cliente extends Model
     protected $fillable = ['nombre','apellidos','email'];
 
 
+    //Relación uno a muchos con opiniones
+    public function opiniones()
+    {
+        return $this->hasMany('App\Models\Opinione');
+    }
+
 }

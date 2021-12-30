@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cliente;
 use App\Models\Opinione;
+use App\Models\Habitacione;
 use Illuminate\Http\Request;
 
 /**
@@ -31,8 +33,14 @@ class OpinioneController extends Controller
      */
     public function create()
     {
+        //Consultamos las categorías por el nombre y el ID.
+        $habitaciones = Habitacione::pluck('nombre','id');
+
+        //Consultamos las categorías por el nombre y el ID.
+        $clientes = Cliente::pluck('nombre','id');
+
         $opinione = new Opinione();
-        return view('opinione.create', compact('opinione'));
+        return view('opinione.create', compact('opinione', 'habitaciones', 'clientes'));
     }
 
     /**

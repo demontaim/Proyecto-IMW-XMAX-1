@@ -39,6 +39,7 @@
 										<th>Nombre</th>
 										<th>Apellidos</th>
 										<th>Email</th>
+                                        <th>Opiniones</th>
 
                                         <th></th>
                                     </tr>
@@ -51,6 +52,7 @@
 											<td>{{ $cliente->nombre }}</td>
 											<td>{{ $cliente->apellidos }}</td>
 											<td>{{ $cliente->email }}</td>
+                                            <td>opiniones</td>
 
                                             <td align="right">
                                                 <form action="{{ route('clientes.destroy',$cliente->id) }}" method="POST" id="form-eliminar">
