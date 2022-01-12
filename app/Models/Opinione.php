@@ -19,17 +19,17 @@ class Opinione extends Model
 {
     
     static $rules = [
-		'opinion' => 'required',
+      'opinion' => 'required',
+      'cliente_id' => 'required',
+      'habitacion_id' => 'required'
     ];
 
     protected $perPage = 20;
 
-    /**
-     * Attributes that should be mass-assignable.
-     *
-     * @var array
-     */
-    protected $fillable = ['opinion'];
+    
+    // protected $fillable = ['opinion'];
+
+    protected $guarded = [];
 
 
     //Relación uno a muchos con usuarios
