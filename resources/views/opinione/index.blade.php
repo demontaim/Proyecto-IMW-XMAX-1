@@ -49,8 +49,8 @@
                                             <td>{{ ++$i }}</td>
                                             
 											<td>{{ $opinione->opinion }}</td>
-                                            <td>{{ $opinione->cliente_id }}</td>
-                                            <td>{{ $opinione->habitacion_id }}</td>
+                                            <td>{{ $opinione->habitacion->nombre??'Sin habitación' }}</td>
+                                            <td>{{ $opinione->cliente->nombre??'Anónimo' }}</td>
 
                                             <td align="right">
                                                 <form action="{{ route('opiniones.destroy',$opinione->id) }}" method="POST" id="form-eliminar">

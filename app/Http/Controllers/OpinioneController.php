@@ -20,9 +20,13 @@ class OpinioneController extends Controller
      */
     public function index()
     {
-        $opiniones = Opinione::paginate();
+        // $opiniones = Opinione::paginate();
 
-        return view('opinione.index', compact('opiniones'))
+        $opiniones = Opinione::with('clientes')->paginate();
+        
+        $nombre = Cliente::get('nombre');
+
+        return view('opinione.index', compact('opiniones', 'nombre'))
             ->with('i', (request()->input('page', 1) - 1) * $opiniones->perPage());
     }
 
