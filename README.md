@@ -19,4 +19,4 @@ El hotel tiene una serie de **clientes** que pueden realizar **valoraciones** a 
 
 ## Link al Proyecto de Gitpod
 
-[Proyecto de Gitpod](https://gitpod.io#snapshot/d6b6e444-3168-496b-8822-137c6b17c75f)
+[Proyecto de Gitpod](https://gitpod.io#snapshot/1fcab15d-c939-4b1a-83b0-2825b3c89ce8)
