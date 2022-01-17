@@ -32,11 +32,13 @@ _**Comandos Útiles**_
 callmeaday@heaven:~$ php -S 0.0.0.0:8000 -t public
 ```
 <br>
+
 >Borrar la base de datos y volver a crearla:
 ```console
 callmeaday@heaven:~$ php artisan migrate:fresh
 ```
 <br>
+
 >Generar datos de prueba con Tinker:
 ```console
 callmeaday@heaven:~$ php artisan tinker
@@ -45,6 +47,7 @@ callmeaday@heaven:~$ php artisan tinker
 >>> App\Models\Product::factory()->make();
 ```
 <br>
+
 >Insertar datos en la base de datos con Tinker:
 ```console
 callmeaday@heaven:~$ php artisan tinker
@@ -53,6 +56,7 @@ callmeaday@heaven:~$ php artisan tinker
 >>> App\Models\Product::factory()->create();
 ```
 <br>
+
 >El seeder también se puede ejecutar usando en la terminal el siguiente comando:
 ```console
 callmeaday@heaven:~$ php artisan db:seed
@@ -100,3 +104,15 @@ callmeaday@heaven:~$ php artisan make:request ProductRequest
 ```console
 callmeaday@heaven:~$ php artisan make:model Modelo -a
 ```
+
+<br>
+
+>Para el envio de correos con Laravel:
+1. Primero necesitamos declarar como nos vamos a conectar al servidor.
+
+    Vamos a tener que decidir si queremos conectarnos a un proveedor basado en servidores smtp o a un proveedor basado en api's.
+    
+    Esto se realiza en **config/mail.php**.
+
+2. Declaro la variable MAIL_MAILER=smtp en nuestro archivo *.env*.
+

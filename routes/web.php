@@ -4,7 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EventoController;
 
 
-
+use App\Mail\ContactanosMailable;
+use Illuminate\Support\Facades\Mail;
 
 Route::get('/', function () {
 
@@ -35,3 +36,12 @@ Route::resource('evento', App\Http\Controllers\EventoController::class)->only('i
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+//Envío de emails con Laravel
+Route::get('contactanos', function(){
+    $correo = new ContactanosMailable;
+    Mail::to('cliente@example.com')->send($correo);
+
+    return '<h1 align="center">Mensaje enviado :)</h1>';
+});
