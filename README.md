@@ -15,6 +15,7 @@ El hotel tiene una serie de **clientes** que pueden realizar **valoraciones** a 
 | Categoría  | Categoría que clasifica las habitaciones.     |
 | Cliente | Usuarios del sistema  |
 | Opinión | Opiniones generadas por los usuarios. Cada usuario tiene su propia opinión.  |
+| Evento  | Eventos del hotel que funcionan con FullCalendar. |
 
 
 ## Link al Proyecto de Gitpod
@@ -108,11 +109,13 @@ callmeaday@heaven:~$ php artisan make:model Modelo -a
 <br>
 
 >Para el envio de correos con Laravel:
-1. Primero necesitamos declarar como nos vamos a conectar al servidor.
+En este servidor tengo configurado el envío de correos con un smtp llamado [MailTrap.io](https://mailtrap.io/).
 
-    Vamos a tener que decidir si queremos conectarnos a un proveedor basado en servidores smtp o a un proveedor basado en api's.
-    
-    Esto se realiza en **config/mail.php**.
+Con crearos una cuenta y poner vuestras credenciales en el archivo **.env** será suficiente para que el servidor esté a vuestra disposición en modo desarrollo.
 
-2. Declaro la variable MAIL_MAILER=smtp en nuestro archivo *.env*.
+<br>
+
+>Generación de PDF's con Laravel:
+
+
 

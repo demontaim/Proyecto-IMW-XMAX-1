@@ -71,7 +71,7 @@
                                 <a class="nav-link" href="{{ route('evento.index') }}">Eventos</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('info.index') }}">Sobre Nosotros</a>
+                                <a class="nav-link" href="{{ route('info.index') }}">Contáctanos</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('ubicacion.index') }}">¿Dónde Estamos?</a>
