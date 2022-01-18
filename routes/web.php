@@ -42,3 +42,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 //Ruta para la página de contacto y el envío de Emails
 Route::get('contactanos', [InfoController::class, 'index'])->name('info.index');
 Route::post('contactanos', [InfoController::class, 'store'])->name('info.store');
+
+
+//Rutas para generar PDF's de Categorias
+Route::get('categorias/pdf', [CategoriaController::class, 'pdf'])->name('categoria.pdf');

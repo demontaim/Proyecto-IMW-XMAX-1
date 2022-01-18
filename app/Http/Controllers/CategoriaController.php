@@ -16,6 +16,14 @@ class CategoriaController extends Controller
             ->with('i', (request()->input('page', 1) - 1) * $categorias->perPage());
     }
 
+
+    //Método para generar PDF
+    public function pdf()
+    {
+        $categorias = Categoria::paginate();
+        return view('categoria.pdf');
+    }
+
     //Crear una nueva categoría
     public function create()
     {

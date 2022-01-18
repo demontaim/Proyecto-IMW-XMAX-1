@@ -20,7 +20,7 @@ El hotel tiene una serie de **clientes** que pueden realizar **valoraciones** a 
 
 ## Link al Proyecto de Gitpod
 
-[Proyecto de Gitpod](https://gitpod.io#snapshot/1fcab15d-c939-4b1a-83b0-2825b3c89ce8)
+[Proyecto de Gitpod](https://gitpod.io#snapshot/c6e30996-0a0d-4491-b96b-6b0120472254)
 
 
 
@@ -116,6 +116,8 @@ Con crearos una cuenta y poner vuestras credenciales en el archivo **.env** ser�
 <br>
 
 >Generación de PDF's con Laravel:
+Estuve prácticando con eso anoche y cuando estaba implementandolo corrompe el metodo show. Al pedirle una ruta /categoria/pdf se cree que es un nombre o un id entra en conflicto.
 
+También aparte de este proyecto realicé uno de una Tienda de Videojuegos en el que tenía implementado el carrito de compra incluso pero paré por la cantidad de errores que me estaba arrojando. También estás navidades estuve practicando con Jetstream y tengo ganas ya de empezar con Wordpress para ver que podemos sacar de provecho de esto.
 
 

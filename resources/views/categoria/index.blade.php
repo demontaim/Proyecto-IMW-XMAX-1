@@ -19,6 +19,11 @@
                             <div class="float-right">
                                 <a href="{{ route('categorias.create') }}" class="btn btn-primary btn-sm float-right"
                                     data-placement="left">
+                                    {{ __('Generar PDF') }}
+                                </a>
+
+                                <a href="{{ route('categorias.create') }}" class="btn btn-primary btn-sm float-right"
+                                    data-placement="left">
                                     {{ __('Crear una nueva categoría') }}
                                 </a>
                             </div>
