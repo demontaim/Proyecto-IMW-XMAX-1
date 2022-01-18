@@ -73,9 +73,9 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('info.index') }}">Contáctanos</a>
                             </li>
-                            <li class="nav-item">
+                            {{-- <li class="nav-item">
                                 <a class="nav-link" href="{{ route('ubicacion.index') }}">¿Dónde Estamos?</a>
-                            </li>
+                            </li> --}}
                         </ul>
                     @endif
 
